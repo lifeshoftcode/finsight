@@ -1,0 +1,100 @@
+[debug] [2024-06-19T03:19:33.561Z] ----------------------------------------------------------------------
+[debug] [2024-06-19T03:19:33.565Z] Command:       /nix/store/2hxfkbdbwh2s7rc20khzq8sjnywq0xs8-nodejs-18.19.1/bin/node /nix/store/9cksgsmi7xwqm3js1z92zhib6rnrjdcg-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting
+[debug] [2024-06-19T03:19:33.566Z] CLI Version:   13.9.0
+[debug] [2024-06-19T03:19:33.567Z] Platform:      linux
+[debug] [2024-06-19T03:19:33.567Z] Node Version:  v18.19.1
+[debug] [2024-06-19T03:19:33.568Z] Time:          Wed Jun 19 2024 03:19:33 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-06-19T03:19:33.568Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-19T03:19:33.677Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-19T03:19:33.677Z] > authorizing via signed-in user (jonathanlo2729@gmail.com)
+[debug] [2024-06-19T03:19:33.678Z] [iam] checking project finsight-e59a0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-19T03:19:33.681Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/finsight-e59a0:testIamPermissions [none]
+[debug] [2024-06-19T03:19:33.681Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/finsight-e59a0:testIamPermissions x-goog-quota-user=projects/finsight-e59a0
+[debug] [2024-06-19T03:19:33.681Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/finsight-e59a0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-19T03:19:33.948Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/finsight-e59a0:testIamPermissions 200
+[debug] [2024-06-19T03:19:33.949Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/finsight-e59a0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-19T03:19:33.951Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/finsight-e59a0 [none]
+[debug] [2024-06-19T03:19:34.185Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/finsight-e59a0 200
+[debug] [2024-06-19T03:19:34.185Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/finsight-e59a0 {"projectId":"finsight-e59a0","projectNumber":"300637227061","displayName":"finsight","name":"projects/finsight-e59a0","resources":{"hostingSite":"finsight-e59a0","storageBucket":"finsight-e59a0.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_ec8d920e-e122-4722-8a66-cedfc441ffd6"}
+[debug] [2024-06-19T03:19:36.996Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites pageToken=&pageSize=10
+[debug] [2024-06-19T03:19:37.327Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites 200
+[debug] [2024-06-19T03:19:37.327Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites {"sites":[{"name":"projects/finsight-e59a0/sites/finsight","defaultUrl":"https://finsight.web.app","appId":"1:300637227061:web:dc5c389511196a772ac97c","type":"USER_SITE"},{"name":"projects/finsight-e59a0/sites/finsight-e59a0","defaultUrl":"https://finsight-e59a0.web.app","type":"DEFAULT_SITE"},{"name":"projects/finsight-e59a0/sites/finsignt","defaultUrl":"https://finsignt.web.app","appId":"1:300637227061:web:4f53e376ee53bc2f2ac97c","type":"USER_SITE"}]}
+[debug] [2024-06-19T03:19:37.329Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites 
+[debug] [2024-06-19T03:19:37.674Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites 200
+[debug] [2024-06-19T03:19:37.675Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites {"sites":[{"name":"projects/finsight-e59a0/sites/finsight","defaultUrl":"https://finsight.web.app","appId":"1:300637227061:web:dc5c389511196a772ac97c","type":"USER_SITE"},{"name":"projects/finsight-e59a0/sites/finsight-e59a0","defaultUrl":"https://finsight-e59a0.web.app","type":"DEFAULT_SITE"},{"name":"projects/finsight-e59a0/sites/finsignt","defaultUrl":"https://finsignt.web.app","appId":"1:300637227061:web:4f53e376ee53bc2f2ac97c","type":"USER_SITE"}]}
+[debug] [2024-06-19T03:19:37.675Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/finsight-e59a0/webApps/-/config [none]
+[debug] [2024-06-19T03:19:38.236Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/finsight-e59a0/webApps/-/config 200
+[debug] [2024-06-19T03:19:38.236Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/finsight-e59a0/webApps/-/config {"projectId":"finsight-e59a0","storageBucket":"finsight-e59a0.appspot.com","locationId":"us-central","apiKey":"AIzaSyCQ0Eak2ooa6ymDL6ERWWoUhmr1jVHfwd0","authDomain":"finsight-e59a0.firebaseapp.com","messagingSenderId":"300637227061"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-06-19T03:19:44.846Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites/finsight-e59a0 [none]
+[debug] [2024-06-19T03:19:45.126Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites/finsight-e59a0 200
+[debug] [2024-06-19T03:19:45.126Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/finsight-e59a0/sites/finsight-e59a0 {"name":"projects/finsight-e59a0/sites/finsight-e59a0","defaultUrl":"https://finsight-e59a0.web.app","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.3.0-canary.9
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/7) ...
+
+[info]    Generating static pages (1/7) 
+
+[info]    Generating static pages (3/7) 
+
+[info]    Generating static pages (5/7) 
+
+[info] [2024-06-19T03:20:32.874Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at i0 (/home/user/finsight/.next/server/app/login/page.js:1460:550)
+    at sS (/home/user/finsight/.next/server/app/login/page.js:1505:920)
+    at el.instanceFactory (/home/user/finsight/.next/server/app/login/page.js:1505:1641)
+    at ec.getOrInitializeService (/home/user/finsight/.next/server/app/login/page.js:230:2776)
+    at ec.initialize (/home/user/finsight/.next/server/app/login/page.js:230:2151)
+    at sw (/home/user/finsight/.next/server/app/login/page.js:1505:1283)
+    at sT (/home/user/finsight/.next/server/app/login/page.js:1505:1117)
+    at 995 (/home/user/finsight/.next/server/app/login/page.js:3660:313)
+    at Object.t [as require] (/home/user/finsight/.next/server/webpack-runtime.js:1:128)
+    at require (/home/user/finsight/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:18477) {
+  digest: '856118273'
+}
+
+Error occurred prerendering page "/login". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at i0 (/home/user/finsight/.next/server/app/login/page.js:1460:550)
+    at sS (/home/user/finsight/.next/server/app/login/page.js:1505:920)
+    at el.instanceFactory (/home/user/finsight/.next/server/app/login/page.js:1505:1641)
+    at ec.getOrInitializeService (/home/user/finsight/.next/server/app/login/page.js:230:2776)
+    at ec.initialize (/home/user/finsight/.next/server/app/login/page.js:230:2151)
+    at sw (/home/user/finsight/.next/server/app/login/page.js:1505:1283)
+    at sT (/home/user/finsight/.next/server/app/login/page.js:1505:1117)
+    at 995 (/home/user/finsight/.next/server/app/login/page.js:3660:313)
+    at Object.t [as require] (/home/user/finsight/.next/server/webpack-runtime.js:1:128)
+    at require (/home/user/finsight/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:18477)
+
+[info]  ✓ Generating static pages (7/7)
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/login/page: /login
+
+[debug] [2024-06-19T03:20:34.866Z] Error: ENOENT: no such file or directory, open '/home/user/finsight/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
